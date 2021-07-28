@@ -1,5 +1,5 @@
 
-from textos import binario, texts, encoder, decoder
+from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram
 
 def numEnt():
     correcto = False
@@ -21,7 +21,10 @@ while (salir != True):
     print("2. Binario a Texto")
     print("3. Texto a Base 64")
     print("4. Base 64 a Texto")
-    print("5. Salir")
+    print("5. Texto a Binario con Histograma de Bits")
+    print("6. Texto a Binario con Histograma de Bigramas")
+    print("7. Texto a Binario con Histograma de Trigramas")
+    print("8. Salir")
 
     opcion = numEnt()
 
@@ -50,6 +53,20 @@ while (salir != True):
 
         print('El texto en base 64: ', mensaje, ' es el siguiente string: \n', resultado)
 
+    elif opcion == 5:
+        string = input('Ingrese el texto que desea convertir a binario y mostrar la distribución de bits: \n')
+        converting = binario(string)
+        resultado2 = bitshistogram(converting)
+
+    elif opcion == 6:
+        string = input('Ingrese el texto que desea convertir a binario y mostrar la distribución de bigramas: \n')
+        converting = binario(string)
+        resultado2 = bigramshistogram(converting)
+
+    elif opcion == 7:
+        string = input('Ingrese el texto que desea convertir a binario y mostrar la distribución de trigramas: \n')
+        converting = binario(string)
+        resultado2 = trigramshistogram(converting)
     else:
         print("ingrese una opción válida")
 
