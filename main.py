@@ -1,5 +1,5 @@
 
-from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram, xor
+from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram, XOR
 
 def numEnt():
     correcto = False
@@ -70,10 +70,23 @@ while (salir != True):
         resultado2 = trigramshistogram(converting)
 
     elif opcion == 8: 
-        num1 = int(input( "Inserte el primer numero: "))
-        num2 = int(input("Inserte el segundo número: "))
-        res = xor(num1,num2)
-        print("El resultado del XOR de los numeros ingresados es: " + res)
+       try: 
+        num1 = int(input("Ingrese la primer cadena de bits en binario: "),2)
+       except ValueError:
+        print("Por favor ingrese un valor en binario.")
+        
+       try: 
+        num2 = int(input("Ingrese la segunda cadena de bits en binario: "),2).
+       except ValueError: 
+        print("Por favor ingrese un valor en binario.")
+       
+       z = XOR(num1, num2)
+       print("El resultado del xor de las dos cadenas es de " + z)
+    
+    elif opcion == 9: 
+        print("gracias por utilizar el programa, adiós")
+        salir = True
+                
     else:
         print("ingrese una opción válida")
 
