@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 import base64
+from operator import xor
+
 
 def binario(texto):
     asc = []
@@ -103,9 +105,9 @@ def trigramshistogram(mensaje):
     plt.bar(dataframe.index, dataframe.num, width=0.5, color='g')
     plt.show()
 
-def xor(num1, num2):
+def XOR(x, y):
     
-    res = (xor(num1, num2))
+    res = (xor(x, y))
     r = bin(res)
 
     return r
