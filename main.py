@@ -76,7 +76,7 @@ while (salir != True):
         print("Por favor ingrese un valor en binario.")
         
        try: 
-        num2 = int(input("Ingrese la segunda cadena de bits en binario: "),2).
+        num2 = int(input("Ingrese la segunda cadena de bits en binario: "),2)
        except ValueError: 
         print("Por favor ingrese un valor en binario.")
        
