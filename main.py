@@ -1,5 +1,5 @@
 
-from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram
+from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram, xor
 
 def numEnt():
     correcto = False
@@ -24,7 +24,8 @@ while (salir != True):
     print("5. Texto a Binario con Histograma de Bits")
     print("6. Texto a Binario con Histograma de Bigramas")
     print("7. Texto a Binario con Histograma de Trigramas")
-    print("8. Salir")
+    print("8. XOR de dos numeros")
+    print("9. Salir")
 
     opcion = numEnt()
 
@@ -67,6 +68,12 @@ while (salir != True):
         string = input('Ingrese el texto que desea convertir a binario y mostrar la distribución de trigramas: \n')
         converting = binario(string)
         resultado2 = trigramshistogram(converting)
+
+    elif opcion == 8: 
+        num1 = int(input( "Inserte el primer numero: "))
+        num2 = int(input("Inserte el segundo número: "))
+        res = xor(num1,num2)
+        print("El resultado del XOR de los numeros ingresados es: " + res)
     else:
         print("ingrese una opción válida")
 

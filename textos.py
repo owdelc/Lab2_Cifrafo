@@ -102,3 +102,10 @@ def trigramshistogram(mensaje):
 
     plt.bar(dataframe.index, dataframe.num, width=0.5, color='g')
     plt.show()
+
+def xor(num1, num2):
+    
+    res = (xor(num1, num2))
+    r = bin(res)
+
+    return r
