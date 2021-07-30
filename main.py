@@ -25,7 +25,8 @@ while (salir != True):
     print("6. Texto a Binario con Histograma de Bigramas")
     print("7. Texto a Binario con Histograma de Trigramas")
     print("8. XOR de dos numeros")
-    print("9. Salir")
+    print("9. XOR de una palabara y bits")
+    print("10. Salir")
 
     opcion = numEnt()
 
@@ -84,9 +85,13 @@ while (salir != True):
        print("El resultado del xor de las dos cadenas es de " + z)
     
     elif opcion == 9: 
-        palabra = input('Ingrese palabra: ')
+        palabra = input('Ingrese palabra para realizar XOR con generador aleatorio: ')
         
         dxor(palabra)
+        
+    elif opcion == 10:
+        print("\nGracias por emplear nuestra herramienta")
+        salir = True
                 
     else:
         print("ingrese una opción válida")

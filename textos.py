@@ -132,15 +132,27 @@ def dxor(texto):
 
         resultado.append(xor1[2:])
     
-    
+    print('Histograma de X')
+    bitshistogram(bina)
+
+    print('Histograma Resultado XOR')
     bitshistogram(resultado)
 
     input('Enter para continuar con siguiente grafica...\n')
+
+    print('Histograma de X')
+    bigramshistogram(bina)
+
+    print('Histograma Resultado XOR')
 
     bigramshistogram(resultado)
 
     input('Enter para continuar con siguiente grafica...\n')
 
+    print('Histograma de X')
+    trigramshistogram(bina)
+
+    print('Histograma Resultado XOR')
     trigramshistogram(resultado)
 
     input('Enter para continuar con siguiente grafica...\n')
