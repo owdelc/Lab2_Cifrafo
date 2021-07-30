@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import math
 import base64
 from operator import xor
-
+import numpy as npy
+import random
 
 def binario(texto):
     asc = []
@@ -33,8 +34,6 @@ def texts(mensaje):
     for x in asc:
         texto = texto + chr(x)
     return texto
-
-
 
 
 def encoder(mensaje):
@@ -111,3 +110,43 @@ def XOR(x, y):
     r = bin(res)
 
     return r
+
+def dxor(texto):
+    bina = binario(texto)
+
+    generado =''
+
+    resultado = []
+
+    for i in bina:
+        y = str(i)
+        a = len(y)
+        for h in range(a):
+            
+            gen = random.randint(0,1)
+            gen2 = str(gen)
+
+            generado  = generado + gen2
+    
+        xor1 = XOR(i, int(generado))
+
+        resultado.append(xor1[2:])
+    
+    
+    bitshistogram(resultado)
+
+    input('Enter para continuar con siguiente grafica...\n')
+
+    bigramshistogram(resultado)
+
+    input('Enter para continuar con siguiente grafica...\n')
+
+    trigramshistogram(resultado)
+
+    input('Enter para continuar con siguiente grafica...\n')
+
+
+
+    
+
+    return

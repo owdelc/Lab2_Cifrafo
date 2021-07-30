@@ -1,5 +1,5 @@
 
-from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram, XOR
+from textos import binario, texts, encoder, decoder, bitshistogram, bigramshistogram, trigramshistogram, XOR, dxor
 
 def numEnt():
     correcto = False
@@ -84,8 +84,9 @@ while (salir != True):
        print("El resultado del xor de las dos cadenas es de " + z)
     
     elif opcion == 9: 
-        print("gracias por utilizar el programa, adiós")
-        salir = True
+        palabra = input('Ingrese palabra: ')
+        
+        dxor(palabra)
                 
     else:
         print("ingrese una opción válida")
